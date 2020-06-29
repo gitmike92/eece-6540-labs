@@ -22,7 +22,3 @@ __kernel void simpleMultiply(
 
     outputC[row*widthB + col] = sum;
 }
-/* Execute the kernel*/
-size_t globalws[2]={wC, hC};
-size_t localws[2] = {2, 2};
-ret = clEnqueueNDRangerKernel{command_queue, kernel, 2, NULL, globalws, localws, 0, NULL, NULL};
