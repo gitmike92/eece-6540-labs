@@ -176,7 +176,7 @@ int main()
 
     /* Execute the kernel */
     size_t globalws[2]={wC, hC};
-    size_t localws[10] = {10, 10};
+    size_t localws[10] = {2, 2};
     ret = clEnqueueNDRangeKernel(command_queue, kernel, 2, NULL,
       globalws, localws, 0, NULL, NULL);
     /* it is important to check the return value.
